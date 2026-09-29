@@ -2,7 +2,7 @@ User-agent: *
 Disallow:
 
 # Sitemap reference
-Sitemap: https://lifecalc.app/sitemap.xml
+Sitemap: https://www.finance-calculator.online/sitemap.xml
 
 # Crawl-delay: optional
 # Crawl-delay: 10
