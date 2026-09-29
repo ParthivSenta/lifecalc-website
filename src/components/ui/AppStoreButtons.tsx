@@ -21,9 +21,9 @@ export default function AppStoreButtons({
   if (!hasIos && !hasAndroid) return null
 
   const sizeClasses = {
-    sm: 'h-10 sm:h-11',
-    md: 'h-12 sm:h-14',
-    lg: 'h-14 sm:h-16',
+    sm: 'h-12 sm:h-12',
+    md: 'h-14 sm:h-16',
+    lg: 'h-16 sm:h-20',
   }[size]
 
   return (
@@ -42,12 +42,12 @@ export default function AppStoreButtons({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Download LifeCalc on the App Store"
-          className="inline-flex shrink-0 rounded-[12px] transition-all duration-200 hover:scale-[1.03] hover:opacity-95 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+          className={`inline-flex ${sizeClasses} items-center justify-center shrink-0 rounded-[12px] px-2 transition-all duration-200 hover:scale-[1.03] hover:opacity-95 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 overflow-hidden`}
         >
           <img
             src={appStoreSvg}
             alt="Download on the App Store"
-            className={`${sizeClasses} w-auto object-contain drop-shadow-md`}
+            className={`h-full w-auto object-contain drop-shadow-md`}
             draggable={false}
           />
         </a>
@@ -58,12 +58,12 @@ export default function AppStoreButtons({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Get LifeCalc on Google Play"
-          className="inline-flex shrink-0 rounded-[12px] transition-all duration-200 hover:scale-[1.03] hover:opacity-95 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+          className={`inline-flex ${sizeClasses} items-center justify-center shrink-0 rounded-[12px] px-2 transition-all duration-200 hover:scale-[1.03] hover:opacity-95 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 overflow-hidden`}
         >
           <img
             src={playStoreSvg}
             alt="Get it on Google Play"
-            className={`${sizeClasses} w-auto object-contain drop-shadow-md`}
+            className={`h-full w-auto object-contain drop-shadow-md`}
             draggable={false}
           />
         </a>
