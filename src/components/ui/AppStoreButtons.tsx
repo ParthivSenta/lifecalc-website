@@ -13,7 +13,7 @@ interface AppStoreButtonsProps {
 export default function AppStoreButtons({
   className = '',
   stacked = false,
-  size = 'md',
+  size = 'lg',
 }: AppStoreButtonsProps) {
   const hasIos = Boolean(SITE.appStoreUrl)
   const hasAndroid = Boolean(SITE.playStoreUrl)
@@ -21,9 +21,9 @@ export default function AppStoreButtons({
   if (!hasIos && !hasAndroid) return null
 
   const sizeClasses = {
-    sm: 'h-12 sm:h-12',
-    md: 'h-14 sm:h-16',
-    lg: 'h-16 sm:h-20',
+    sm: 'h-14 sm:h-16',
+    md: 'h-16 sm:h-20',
+    lg: 'h-20 sm:h-24',
   }[size]
 
   return (
