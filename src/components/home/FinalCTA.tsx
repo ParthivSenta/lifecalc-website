@@ -5,40 +5,53 @@ import Container from '../ui/Container'
 export default function FinalCTA() {
   return (
     <section
-      className="bg-brand-soft py-16 sm:py-20"
+      id="download"
+      className="bg-background py-16 sm:py-20 lg:py-24 scroll-mt-14"
       aria-labelledby="cta-heading"
     >
       <Container>
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Card */}
-          <div className="bg-brand-deep rounded-[24px] px-8 py-10 sm:px-12 sm:py-12 flex flex-col sm:flex-row items-center gap-8 sm:gap-10">
+          <div className="relative overflow-hidden bg-gradient-to-br from-brand-deep via-[#004B45] to-[#002D29] rounded-[32px] px-8 py-12 sm:px-14 sm:py-16 flex flex-col md:flex-row items-center gap-8 sm:gap-12 shadow-2xl shadow-black/20 border border-white/10">
 
-            {/* App icon */}
-            <div className="shrink-0">
-              <img
-                src={appIcon}
-                alt="LifeCalc app icon"
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-[22px] shadow-xl shadow-black/30 object-cover"
-              />
+            {/* Ambient inner glow */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-20 -top-20 w-80 h-80 bg-brand-tint/15 rounded-full blur-3xl"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -left-20 -bottom-20 w-80 h-80 bg-brand/30 rounded-full blur-3xl"
+            />
+
+            {/* App icon with ring */}
+            <div className="shrink-0 relative z-10">
+              <div className="p-1 rounded-[28px] bg-gradient-to-b from-white/30 to-white/5 shadow-2xl">
+                <img
+                  src={appIcon}
+                  alt="LifeCalc app icon"
+                  className="w-24 h-24 sm:w-28 sm:h-28 rounded-[24px] shadow-lg object-cover"
+                />
+              </div>
             </div>
 
             {/* Copy + buttons */}
-            <div className="text-center sm:text-left flex-1 min-w-0">
-              <p className="text-xs font-semibold text-brand-tint uppercase tracking-widest mb-2">
-                Available Now
-              </p>
+            <div className="text-center md:text-left flex-1 min-w-0 z-10">
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-tint uppercase tracking-widest mb-2 bg-white/10 px-3 py-1 rounded-full">
+                <span>Free on iOS &amp; Android</span>
+              </div>
               <h2
                 id="cta-heading"
-                className="text-2xl sm:text-3xl font-bold text-on-brand leading-tight tracking-tight"
+                className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-on-brand leading-tight tracking-tight"
               >
-                Start planning with more clarity.
+                Take control of your financial destiny today.
               </h2>
-              <p className="mt-2 text-sm text-on-brand/65 leading-relaxed">
-                Explore your financial possibilities with simple calculations
-                and easy-to-understand projections.
+              <p className="mt-3 text-sm sm:text-base text-on-brand/75 leading-relaxed max-w-xl">
+                Join thousands of disciplined savers who use LifeCalc to calculate compound growth, plan early retirement, and stay financially confident.
               </p>
-              <div className="mt-5 flex justify-center sm:justify-start">
-                <AppStoreButtons />
+
+              <div className="mt-6 flex flex-col sm:flex-row items-center md:items-start gap-4">
+                <AppStoreButtons size="md" />
               </div>
             </div>
           </div>

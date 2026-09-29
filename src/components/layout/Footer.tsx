@@ -45,6 +45,17 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     to={item.href}
+                    onClick={(e) => {
+                      if (item.href.startsWith('/#')) {
+                        const id = item.href.replace('/#', '')
+                        const el = document.getElementById(id)
+                        if (el) {
+                          e.preventDefault()
+                          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                          window.history.pushState(null, '', item.href)
+                        }
+                      }
+                    }}
                     className="text-sm text-muted hover:text-brand transition-colors"
                   >
                     {item.label}

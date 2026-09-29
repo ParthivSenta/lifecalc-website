@@ -4,15 +4,19 @@ export interface NavItem {
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'Privacy', href: '/privacy-policy' },
-  { label: 'Terms', href: '/terms-and-conditions' },
+  { label: 'Calculator', href: '/#calculator' },
+  { label: 'Features', href: '/#features' },
+  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'FAQ', href: '/#faq' },
   { label: 'Contact', href: '/contact' },
 ]
 
 export const FOOTER_LINKS = {
   product: [
-    { label: 'Home', href: '/' },
+    { label: 'Live Calculator', href: '/#calculator' },
+    { label: 'Features', href: '/#features' },
+    { label: 'How It Works', href: '/#how-it-works' },
+    { label: 'FAQ', href: '/#faq' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy-policy' },
